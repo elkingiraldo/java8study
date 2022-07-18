@@ -1,8 +1,34 @@
 package co.learn.java8.elkin.spotify;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class GridSearch {
+
+    public static void main(String[] args) {
+        List<String> G = Stream.of(
+                "7283455864",
+                "6731158619",
+                "8988242643",
+                "3830589324",
+                "2229505813",
+                "5633845374",
+                "6473530293",
+                "7053106601",
+                "0834282956",
+                "4607924137"
+                )
+                .collect(Collectors.toList());
+        List<String> P = Stream.of(
+                        "9505",
+                        "3845",
+                        "3530"
+                )
+                .collect(Collectors.toList());
+
+        System.out.println(gridSearch(G, P));
+    }
     /*
      * Complete the 'gridSearch' function below.
      *
